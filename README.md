@@ -10,7 +10,9 @@ The objective of this project is to retrieve the photos that belong to a certain
 This repo is forked from the facenet-pytorch(timesler/facenet-pytorch) as we are using the already developed ResNet model to get the feature descriptors. Our code is under the PersonMatching folder.
 
 ## Download the Dataset
-Since the PIPA dataset is large in size, we haven't added it to this repo. Please download the tar files from [here](https://people.eecs.berkeley.edu/~nzhang/piper.html) into a data folder. <br>
+* Since the PIPA dataset is large in size, we haven't added it to this repo. Please download the tar files from [here](https://people.eecs.berkeley.edu/~nzhang/piper.html) into a data folder in the Person Matching Code directory. <br>
+
+* Also download the [CelebA](https://drive.google.com/drive/folders/0B7EVK8r0v71pTUZsaXdaSnZBZzg) dataset into the same data folder in the Person Matching Code directory. <br>
 
 ## Unzipping tar files for the data
 tar -xvf data/pipa_test.tar <br>
