@@ -66,11 +66,9 @@ if useGT == 'False':
                                                             os.path.basename(im_path)
                                                            ))
             # Calculate embedding (unsqueeze to add batch dimension)
-            if img_cropped is None:
-                img_embedding = -np.inf*np.ones((1,512))
-            else:
-                img_embedding = resnet(img_cropped.unsqueeze(0)).cpu().data.numpy()
-            features.append(img_embedding)
+            sift = cv2.xfeatures2d.SIFT_create()
+            kp1, des1 = sift.detectAndCompute(img_cropped,None)
+            features.append(des1)
             myfile.writelines(im_path+','+str(out[4])+'\n')
     np.save("./faceFeatures.npy", np.concatenate(features, axis=0))
 else:
