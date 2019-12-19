@@ -5,7 +5,7 @@ from matplotlib import pyplot as plt
 
 probe = np.load('./probe_combined_sift.npy', allow_pickle = True)
 gallery = np.load('./gallery_combined_sift.npy', allow_pickle = True)
-scores_ = np.load('./scores_sift.npy', allow_pickle=True)
+
 
 probe_des = probe[:,0]
 gallery_des = gallery[:,0]
@@ -35,7 +35,7 @@ for i,des1 in tqdm(enumerate(probe_des)):
 
 
 np.save('./scores_sift.npy', scores)
-
+scores_ = np.load('./scores_sift.npy', allow_pickle=True)
 #Compute the rank of the scores using CMC
 rankAcc = []
 for rank in range(1,6):
