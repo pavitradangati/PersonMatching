@@ -15,10 +15,21 @@ This repo is forked from the facenet-pytorch(timesler/facenet-pytorch) as we are
 * Also download the [CelebA](https://drive.google.com/drive/folders/0B7EVK8r0v71pTUZsaXdaSnZBZzg) dataset into the same data folder in the Person Matching Code directory. <br>
 
 ## Unzipping tar files for the data
-tar -xvf data/pipa_test.tar <br>
-tar -xvf data/pipa_val.tar <br>
-unzip data/annotations.zip <br>
-tar -xvf data/pipa_leftover.tar <br>
+tar -xvf pipa_test.tar <br>
+tar -xvf pipa_val.tar <br>
+unzip annotations.zip <br>
+tar -xvf pipa_leftover.tar <br>
 
 or run the shell script as: sh unzip_script.sh <br>
 
+## Running DeepFeatures with similarity measures
+cd ./Person\ Matching\ Code/code/DeepFeatures <br>
+Run: sh run_script.sh <br>
+
+## Running SIFT Features with similarity measures
+cd ./Person\ Matching\ Code/code/SIFT <br>
+Run: sh run_script.sh <br>
+
+## Running CelebA matching
+cd ./Person\ Matching\ Code/code/Celeb <br>
+Run: sh run_script.sh <br>
